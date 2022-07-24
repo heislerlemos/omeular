@@ -1,0 +1,120 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+
+:root{
+
+	--dark: hsl(0, 0%, 4%);
+	--light: hsl(0, 0%, 96%); 
+	--border:hsl(0, 0%, 100%);
+	--border-btn: hsl(0, 0%, 96%);
+}
+
+
+* {
+
+	padding: 0;
+	margin:  0;
+	box-sizing: border-box;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	max-width: 1024px;
+	margin: auto;
+}
+
+.nav-brand {
+	font-size: 3.5em;
+	font-weight: bold;
+
+}
+
+
+
+.d-flex {
+
+	display:  flex;
+	display:  wrap;
+}
+
+
+.justify-beteween {
+
+	justify-content: space-between;
+}
+
+
+.text-center {
+
+text-align: center;
+
+}
+
+
+.border-shadow {
+
+	border:  1px solid var(--border-btn);
+		box-shadow:  1px 3 px 10px;
+	}
+
+.text-dark{
+	color:  var(--dark);
+}
+
+
+.inline {
+	display: inline-block;
+}
+
+
+.text-light{
+	color: var(--light);
+}
+
+
+.text-gradient {
+	background: linear-gradient(to right, #22c1c3 ,#5d6f15);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}
+
+
+#header nav {
+	background-color: #6f72d2;
+	padding:  1em 0;
+	width:  100%;
+}
+
+#site-main {
+	margin-top:  6em;
+}
+
+
+#site-main .container .box-nav > a {
+	font-size:  1em;
+	padding:  .5em 1em;
+}
+
+#site-main .container form {
+margin: 2em 0;
+
+}
+
+table {
+	border-spacing: px;
+	width: 100%;
+}
+
+.table td, .table th {
+	padding:  .75em;
+	vertical-align: top;
+}
+
+
+/* testing */
