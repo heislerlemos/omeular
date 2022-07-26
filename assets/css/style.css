@@ -4,7 +4,7 @@
 :root{
 
 	--dark: hsl(0, 0%, 4%);
-	--light: hsl(0, 0%, 96%); 
+	--light:  hsl(0, 0%, 29%) ;
 	--border:hsl(0, 0%, 100%);
 	--border-btn: hsl(0, 0%, 96%);
 }
@@ -165,4 +165,12 @@ border-color: #32383e;
 		border: none;
 		position: relative;
 	}
+}
+
+
+/** Add user and update user **/
+
+.form-title {
+	margin-top: 2em;
+	
 }
