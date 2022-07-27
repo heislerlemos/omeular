@@ -37,4 +37,9 @@ app.get('/', (req,res)=> {
 
 })
 
+app.get('/add-user', (req,res)=> {
+	res.render("add_user");
+
+})
+
 app.listen(3000, ()=> {console.log(`O Servidor esta correr em http://localhost:${PORT}`)})

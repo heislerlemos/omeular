@@ -270,3 +270,9 @@ border-color: #16db93;
 	border-radius: .2em;
 	margin: .5em 0;
 }
+
+#update_user .form-group .btn:hover ,
+#add_user .form-group .btn:hover {
+	background-color: var(--dark);
+	color:  var(--border);
+}
