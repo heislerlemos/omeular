@@ -42,4 +42,9 @@ app.get('/add-user', (req,res)=> {
 
 })
 
+app.get('/update-user', (req,res)=> {
+	res.render("update_user");
+
+})
+
 app.listen(3000, ()=> {console.log(`O Servidor esta correr em http://localhost:${PORT}`)})

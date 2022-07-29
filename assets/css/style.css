@@ -63,9 +63,15 @@ text-align: center;
 	}
 
 .text-dark{
-	color:  white;
-}
+	color:  #080808;
+	}
 
+
+.form-title h2 {
+	color:  black;
+  font-size: 40px;
+  font-weight: 20px;
+}
 
 .inline {
 	display: inline-block;
