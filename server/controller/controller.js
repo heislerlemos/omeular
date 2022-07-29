@@ -30,7 +30,7 @@ user
 
 	.catch(err => {
 		res.status(500).send(	{
-			message.err.message || "Algum erro ocorreu enquanto criavamos o user";
+			message: err.message || "Algum erro ocorreu enquanto criavamos o user"
 		});
 	});
 	
