@@ -1,19 +1,27 @@
-						<tr>
-							<td>1</td>
-							<td>Zamba Dois Prenda</td>
-							<td>934 658 882</td>
-							<td>Pouca delinquencia </td>
-							<td> <img alt="Qries" src="http://www.redeangola.info/wp-content/uploads/2015/08/EU-ESCOLHO_CATAMBOR_PRENDA_AMPE-ROGERIO-1-790x527-580x361.jpg" </td>
+				
+<div class='columns is-multiline'>
 
-							<td>
-								<a href="/update-casa" class="btn border-shadow update">
-									<span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
-								</a>
-							</td>
-							<td>
-									
-									<a class="btn border-shadow delete">
-									<span class="text-gradient"><i class="fas fa-times"></i></span>
-								</a>
-							</td>
-						</tr>
+						<% for(var i = 0; i < casas.length; i++) {%>
+
+							  <div class='column is-4'>		
+
+	<div class="card" style="width: 650px;">
+     <img src="<%-casas[i].fotografia_da_localização%>"  > 
+    <footer class="card-footer">
+    <div class="card-footer-item">Morada : <%= casas[i].morada %></div>
+    <div class="card-footer-item">Contacto :<%= casas[i].contacto %></div>
+    <div class="card-footer-item"> Estado : <%= casas[i].estado_do_bairro %> </div>
+  </footer>
+		</div>
+								</div>
+
+
+
+
+
+
+
+					
+						<% } %>
+
+</div>	
