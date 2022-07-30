@@ -18,7 +18,7 @@ route.get('/', services.homeRoutes);
  * 
  * */
 
-route.get('/add-user', services.add_users);
+route.get('/add-casa', services.add_casa);
 
 /**
  * 
@@ -28,7 +28,7 @@ route.get('/add-user', services.add_users);
  * 
  * 
  * */
-route.get('/update-user', services.update_users);
+route.get('/update-casa', services.update_casa);
 
 
 /**
@@ -43,10 +43,10 @@ route.get('/update-user', services.update_users);
 
 // API
 
-route.post ('/api/users', controller.create);
-route.get ('/api/users', controller.find);
-route.put ('/api/users/:id', controller.update);
-route.delete ('/api/users', controller.delete);
+route.post ('/api/casas', controller.create);
+route.get ('/api/casas', controller.find);
+route.put ('/api/casas/:id', controller.update);
+route.delete ('/api/casas', controller.delete);
 
 
 module.exports = route

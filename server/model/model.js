@@ -26,7 +26,8 @@ var schema = new  mongoose.Shema({
 
 **/
 
-var schema = new  mongoose.Schema({
+
+/**
 name: {
 	type: String,
 	required: true
@@ -43,7 +44,31 @@ status: String
 });
 
 
+**/
+var schema = new  mongoose.Schema({
 
-const Userdb = mongoose.model('userdb', schema);
 
-module.exports = Userdb;
+	morada : {
+		type : String,
+		required: true 
+	},
+
+	contacto : {
+		type : String,
+		required : true
+	},
+
+    estado_do_bairro : {
+    	type : String,
+    	required: true
+    },
+
+    fotografia_da_localização : {
+    	type: String,
+    	required: true
+    }
+
+});
+const Casadb = mongoose.model('casadb', schema);
+
+module.exports = Casadb;
