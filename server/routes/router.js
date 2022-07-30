@@ -44,9 +44,10 @@ route.get('/update-casa', services.update_casa);
 // API
 
 route.post ('/api/casas', controller.create);
-route.get ('/api/casas', controller.find);
+route.get ('/api/casas/', controller.find);
+
 route.put ('/api/casas/:id', controller.update);
-route.delete ('/api/casas', controller.delete);
+route.delete ('/api/casas/:id', controller.delete);
 
 
 module.exports = route
