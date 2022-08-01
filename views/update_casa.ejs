@@ -21,33 +21,26 @@
 
 	<!-- form handling -->
 
+	<!-- form handling -->
+
 	<form  method="POST" id="update_user">
 		<div class="new_user">
 			<div class="form-group">
-				<label for="name" class="text-light"> Morada</label>
-				<input type="hidden" name="id" value="">
-				<input type="text" name="name" value=""placeholder="Heisler Lemos">
+				<input type ="hidden" name="id" value="<%= casa._id%>">
+				<label for="morada" class="text-light"> Morada</label>
+				<input type="text" name="morada" value="<%=casa.morada%>" placeholder="Morada da casa ">
 			</div>
 				<div class="form-group">
-				<label for="Email" class="text-light"> Contacto </label>
-				<input type="text" name="email" value=""placeholder="heisler.lemos@exemplo.com">
+				<label for="contacto" class="text-light"> Contacto </label>
+				<input type="text" name="contacto" value="<%=casa.contacto%>"placeholder="Numero de telefone">
 			</div>
 			<div class="form-group">
-				<label for="genero" class="text-light">estado_do_bairro </label>
-				<div class="radio inline">
-				<input type="radio" id="radio-2"name="genero" value="Masculino">
-				<label for="radio-2" class="radio-label">Mau </label>
-				</div>
-					<div class="radio inline">
-				<input type="radio" id="radio-3"name="genero" value="Feminino">
-				<label for="radio-3" class="radio-label">Bom </label>
-				</div>
+				<label for="estado_do_bairro" class="text-light"> Estado do bairro</label>
+				<input type="text" name="estado_do_bairro" value="<%=casa.estado_do_bairro%>"placeholder="Morada da casa ">
 			</div>
-
-			<div class="form-group">
-				<label for="name" class="text-light"> Fotografias</label>
-				<input type="hidden" name="id" value="">
-				<input type="text" name="name" value=""placeholder="URL">
+				<div class="form-group">
+				<label for="fotografia_da_localização" class="text-light"> Fotografias das localizações</label>
+				<input type="text" name="fotografia_da_localização" value="<%=casa.fotografia_da_localização%>" placeholder=" url das fotografias da localização ">
 			</div>
 
 		<div class="form-group">

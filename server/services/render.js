@@ -26,5 +26,13 @@ exports.add_casa = (req, res) => {
 } 
 
 exports.update_casa = (req, res) => {
-	res.render("update_casa")
+	axios.get("http://localhost:3000/api/casas", { params: {id: req.query.id}})
+	
+	.then(function(casadata){
+		res.render("update_casa", { casa: casadata.data })
+	})
+	.catch(err => {
+		res.send(err);
+	})
 } 
+
