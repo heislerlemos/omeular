@@ -1,27 +1,40 @@
-				
 <div class='columns is-multiline'>
 
 						<% for(var i = 0; i < casas.length; i++) {%>
 
-							  <div class='column is-4'>		
+	<div class='column is-6'>		
 
-	<div class="card" style="width: 650px;">
+	<div class="card" style="width: 650px; " align="center">
 		  <header class="card-header">
+
     <p class="card-header-title">
-    	<i class="fa-solid fa-house" style="color: grey;"></i>
-    </p>
-    <button class="card-header-icon" aria-label="more options">
-      <span class="icon">
-        	<%= i + 1  %>
+    		  <span class="icon">
+       	<%= i + 1  %>
 
       </span>
+    	<a href="/update-casa"><i class="fa-solid fa-pen-to-square" style="color: black;"></i></a>
+
+
+    </p>
+    <button class="card-header-icon" aria-label="more options">
+    	    	    	<a href="/update-casa"><i class="fa-solid fa-delete-left" style="color: black;"></i></a>
+
+    
     </button>
   </header>
-     <img src="<%-casas[i].fotografia_da_localização%>"  > 
+     <img src="<%-casas[i].fotografia_da_localização%>" > 
+       <footer class="card-footer">
+    <b class="card-footer-item">Morada</b>
+    <b  class="card-footer-item">Contacto</b>
+    <b class="card-footer-item">Estado</b>
+  </footer>
     <footer class="card-footer">
-    <div class="card-footer-item">Morada : <%= casas[i].morada %></div>
-    <div class="card-footer-item">Contacto :<%= casas[i].contacto %></div>
-    <div class="card-footer-item"> Estado : <%= casas[i].estado_do_bairro %> </div>
+    <div class="card-footer-item" align="center" style="  border-bottom: 2px solid purple; ">
+ 	
+    	
+   <%= casas[i].morada %> </div>
+    <div class="card-footer-item" align="center" style="  border-bottom: 2px solid green; "> <%= casas[i].contacto %></div>
+    <div class="card-footer-item" align="center" style="  border-bottom: 2px solid pink; ">  <%= casas[i].estado_do_bairro %> </div>
   </footer>
 		</div>
 								</div>
