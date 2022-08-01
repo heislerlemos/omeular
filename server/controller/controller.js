@@ -33,7 +33,8 @@ const casa = new Casadb ({
 casa 
 	.save(casa)
 	.then(data => {
-		res.send(data)
+		//res.send(data)
+		res.redirect('/add-casa');
 	})
 
 	.catch(err => {
@@ -66,11 +67,16 @@ exports.find = (req, res ) => {
 				})
 		}else{ 
 
-	Casadb.find()
+	Casadb.find().sort({ _id: 'descending' })
 
 		.then(casa => {
 			res.send(casa)
+
 		})
+
+
+
+
 		.catch(err => {
 			res.status(500).send({message: err.message  || "Um erro occoreu enquanto  buscava-se uma casa"})
 		})

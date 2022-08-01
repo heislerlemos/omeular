@@ -71,6 +71,6 @@ var schema = new  mongoose.Schema({
     }
 
 });
-const Casadb = mongoose.model('casadb', schema);
+const Casadb = mongoose.model('casadb', schema)
 
 module.exports = Casadb;
