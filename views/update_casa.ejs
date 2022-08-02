@@ -11,11 +11,11 @@
 		<div class="box-nav d-flex justify-between">
 			<div class="filter">
 
-				<a href="/"><i class="fas fa-angle-double-left"></i> Todos os Casas </a>
+				<a href="/"><i class="fas fa-angle-double-left"></i> Todas os Casas </a>
 			</div>
 		</div>
 		<div class="form-title text-center">
-			<h2 class="text-dark"> Atualizar Utilizador</h2>
+			<h2 class="text-dark"> Atualizar Casa</h2>
 			<span class="color: grey">Utilizar  o formulario em baixo para  atualizar uma nova conta </span>
 		</div>	
 
@@ -23,10 +23,14 @@
 
 	<!-- form handling -->
 
-	<form  method="POST" id="update_user">
+	<form  method="POST" id="update_casa">
 		<div class="new_user">
 			<div class="form-group">
-				<input type ="hidden" name="id" value="<%= casa._id%>">
+			
+								<label for="morada" class="text-light"> Morada</label>
+
+				<input type ="text" name="id" value="<%= casa._id%>" placeholder="update id">
+
 				<label for="morada" class="text-light"> Morada</label>
 				<input type="text" name="morada" value="<%=casa.morada%>" placeholder="Morada da casa ">
 			</div>
@@ -54,6 +58,9 @@
 
 </div>
 </main>
+
+
+
 
 <!--- /Main site--->
 

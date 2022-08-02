@@ -5,32 +5,32 @@ $("#add_user").submit(function (event) {
 
 
 
-$("#update_user").submit(function (event){
-  event.preventDefault();
 
-  var unindexed_array = $(this).serializeArray();
-  
-      var data = {}
+$("#update_casa").submit(function(event){
+    event.preventDefault();
 
-      $.map(unindexed_array, function(n, i){
-        data[n["name"]] = n["value"]
-      })
+    var unindexed_array = $(this).serializeArray();
+    var data = {}
 
-      console.log(data);
 
-      var request = {
+    $.map(unindexed_array, function(n, i){
+        data[n['name']] = n['value']
+    })
+
+
+    var request = {
         "url" : `http://localhost:3000/api/casas/${data.id}`,
         "method" : "PUT",
         "data" : data
-      }
+    }
 
+    $.ajax(request).done(function(response){
+        alert("Data Updated Successfully!");
+    })
 
-      $.ajax(request).done(function(response){
-        alert("Os dados foram atualizados com sucesso");
-      })
+        console.log(data.morada);
 
 })
-
 
 document.addEventListener('DOMContentLoaded', () => {
   // Functions to open and close a modal

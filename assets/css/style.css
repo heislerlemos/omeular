@@ -200,13 +200,13 @@ border-color: #32383e;
 	margin: auto;
 }
 
-#update_user .form-group, 
+#update_casa .form-group, 
 #add_user .form-group  {
 	margin: .4em 0;
 }
 
 
-#update_user .form-group  input[type="text"],
+#update_casa .form-group  input[type="text"],
 #add_user .form-group  input[type="text"]{
 	width: 100%;
 	padding: .6em 1em;
@@ -219,7 +219,7 @@ border-color: #32383e;
 
 
 
-#update_user .form-group  .radio,
+#update_casa .form-group  .radio,
 
 #add_user .form-group  .radio
 {
@@ -273,7 +273,7 @@ border-color: #16db93;
 	background-color: #b4b4b4;
 }
 
-#update_user .form-group .btn,
+#update_casa .form-group .btn,
 #add_user .form-group .btn {
 	width: 100%;
 	padding: .9em 1em;
@@ -286,7 +286,7 @@ border-color: #16db93;
 	margin: .5em 0;
 }
 
-#update_user .form-group .btn:hover ,
+#update_casa .form-group .btn:hover ,
 #add_user .form-group .btn:hover {
 	background-color: var(--dark);
 	color:  var(--border);
