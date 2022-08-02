@@ -1,10 +1,16 @@
+// adding the 
+
 $("#add_user").submit(function (event) {
 	// body...
-	alert("Dados inseridos com sucesso")
+	alert("Os dados foram inseridos com sucessos")
 })
 
 
 
+
+
+
+// Updating the users 
 
 $("#update_casa").submit(function(event){
     event.preventDefault();
@@ -25,12 +31,44 @@ $("#update_casa").submit(function(event){
     }
 
     $.ajax(request).done(function(response){
-        alert("Data Updated Successfully!");
+        alert("A casa foi atualizada com sucesso .");
     })
 
         console.log(data.morada);
 
 })
+
+
+
+
+  if(window.location.pathname == "/"){
+    $ondelete = $("div.column.is-6 div.card header.card-header button.card-header-icon  a");
+   
+    $ondelete.click(function(){
+
+      var id = $(this).attr("data-id")
+
+      var request = {
+        "url" : `http://localhost:3000/api/casas/${id}`,
+        "method" : "DELETE"
+    }
+
+    if(confirm (" Tens a certeza que queres apagar ?")){
+        
+     $.ajax(request).done(function(response){
+        alert("A casa foi apagada com sucesso .");
+        location.reload();
+    })
+
+    }
+
+  })
+
+}
+
+
+//Modal function 
+
 
 document.addEventListener('DOMContentLoaded', () => {
   // Functions to open and close a modal

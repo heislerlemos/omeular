@@ -1,68 +1,55 @@
 
 <div class='columns is-multiline'>
-
-						<% for(var i = 0; i < casas.length; i++) {%>
+	<% for(var i = 0; i < casas.length; i++) {%>
 
 	<div class='column is-6'>		
 
 	<div class="card" style="width: 650px; " align="center">
-		  <header class="card-header">
-
-    <p class="card-header-title">
-   
-    	<a href="/update-casa?id=<%= casas[i]._id%>"><i class="fa-solid fa-pen-to-square" style="color: #008B8B;"></i></a>
-
-
+	<header class="card-header">
+    <p class="card-header-title"> 
+    	<a href="/update-casa?id=<%= casas[i]._id%>"><i class="fa-solid fa-pen-to-square" style="color: #008B8B;"></i>
+      </a>
     </p>
     <button class="card-header-icon" aria-label="more options">
-    	    	    	<a href="/update-casa"><i class="fa-solid fa-delete-left" style="color: #8B0000;"></i></a>
-
-    
+    <a  data-id=<%=casas[i]._id%>>
+      <i class="fa-solid fa-delete-left" style="color: #8B0000;">          
+      </i>
+     </a>    
     </button>
   </header>
+    <!-- Image to modal trigger--->
     <a class="js-modal-trigger" data-target="modal-js-example">
-
-     <img src="<%-casas[i].fotografia_da_localização%>" > 
+    <img src="<%-casas[i].fotografia_da_localização%>" > 
     </a>
 
-       <footer class="card-footer">
+    <footer class="card-footer">
     <b class="card-footer-item">Morada</b>
     <b  class="card-footer-item">Contacto</b>
-    <b class="card-footer-item">Estado</b>
-
-
-
-  </footer>
+    <b class="card-footer-item">Estado da localização </b>
+    </footer>
     <footer class="card-footer">
-    <div class="card-footer-item" align="center" style="  border-bottom: 2px solid purple; ">
- 	
-    	
-   <%= casas[i].morada %> </div>
+    <div class="card-footer-item" align="center" style="  border-bottom: 2px solid purple;">    	
+    <%= casas[i].morada %> </div>
     <div class="card-footer-item" align="center" style="  border-bottom: 2px solid green; "> <%= casas[i].contacto %></div>
     <div class="card-footer-item" align="center" style="  border-bottom: 2px solid pink; ">  <%= casas[i].estado_do_bairro %> </div>
-  </footer>
+    </footer>
 		</div>
-								</div>
+		</div>
 
-
-
-
+<!--- Setting up the modal  --->
 
 <div id="modal-js-example" class="modal">
-  <div class="modal-background"></div>
-
-  <div class="modal-content">
-
-    <p class="image is-4by3">
+<div class="modal-background"></div>
+<div class="modal-content">
+  <p class="image is-4by3">
 
 <img src="https://images.adsttc.com/media/images/5e87/a791/b357/6539/2100/0058/slideshow/shutterstock_1196071939.jpg?1585948522">  
     </p>
-  </div>
-
-  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+<button class="modal-close is-large" aria-label="close"></button>
 </div>
 
 					
-						<% } %>
 
+<% } %>
 </div>	
