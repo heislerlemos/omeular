@@ -25,7 +25,7 @@ $("#update_casa").submit(function(event){
 
 
     var request = {
-        "url" : `http://localhost:3000/api/casas/${data.id}`,
+        "url" : `https://omeular.herokuapp.com/api/casas/${data.id}`,
         "method" : "PUT",
         "data" : data
     }
@@ -49,7 +49,7 @@ $("#update_casa").submit(function(event){
       var id = $(this).attr("data-id")
 
       var request = {
-        "url" : `http://localhost:3000/api/casas/${id}`,
+        "url" : `https://omeular.herokuapp.com/api/casas/${id}`,
         "method" : "DELETE"
     }
 
