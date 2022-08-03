@@ -14,7 +14,7 @@ const app = express();
 
 dotenv.config({path:'config.env'})
 
-const PORT  = process.env.PORT || 3000
+const PORT  = process.env.PORT || 8080
 
 
 
@@ -49,4 +49,4 @@ app.use('/img', express.static(path.resolve(__dirname, "assets/img")))
 app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 
 
-app.listen(5000, ()=> {console.log(`O Servidor esta correr em http://localhost:${PORT}`)})
+app.listen(3000, ()=> {console.log(`O Servidor esta correr em http://localhost:${PORT}`)})
