@@ -101,7 +101,7 @@ background-clip: text;
 
 
 #header nav {
-	background-color: #6f72d2;
+	background-color:    hsl(0, 0%, 21%) ;
 	padding:  1em 0;
 	width:  100%;
 	  box-shadow: 5px 4px  grey;
