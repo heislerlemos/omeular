@@ -6,7 +6,7 @@ const axios = require('axios');
 exports.homeRoutes = (req, res) => {	
 	//Make a get request to the api users
 	
-	axios.get('https://omeular.herokuapp.com/api/casas')
+	axios.get('http://localhost:3000/api/casas')
 
 		.then(function(response){
 			console.log(response.data)
@@ -28,7 +28,7 @@ exports.add_casa = (req, res) => {
 
 	exports.update_casa = (req, res) =>{
 
-    axios.get('https://omeular.herokuapp.com/api/casas', { params : { id : req.query.id }})        
+    axios.get('http://localhost:3000/api/casas/', { params : { id : req.query.id }})        
         .then(function(casadata){
             res.render("update_casa", { casa : casadata.data})
         })
