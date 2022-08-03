@@ -14,7 +14,7 @@ const app = express();
 
 dotenv.config({path:'config.env'})
 
-const PORT  = process.env.PORT || 8080
+//const PORT  = process.env.PORT || 8080
 
 
 
@@ -48,6 +48,17 @@ app.use('/css', express.static(path.resolve(__dirname, "assets/css")))
 app.use('/img', express.static(path.resolve(__dirname, "assets/img")))
 app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 
+app.set('port', (process.env.PORT || 5000));
+
+//For avoidong Heroku $PORT error
+app.get('/', function(request, response) {
+    var result = 'App is running'
+    response.send(result);
+}).listen(app.get('port'), function() {
+    console.log('App is running, server is listening on port ', app.get('port'));
+});
+
 
 //app.listen(5000, ()=> {console.log(`O Servidor esta correr em http://localhost:${PORT}`)})
-app.listen(3000, ()=> {console.log(`O Servidor esta correr em http://localhost:${PORT}`)})
+//app.listen(3000, ()=> {console.log(`O Servidor esta correr em http://localhost:${PORT}`)})
+
