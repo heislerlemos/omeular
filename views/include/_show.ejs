@@ -18,7 +18,7 @@
     </button>
   </header>
     <!-- Image to modal trigger--->
-    <a class="js-modal-trigger" data-target="modal-js-example">
+    <a class="js-modal-trigger" data-target="<%= casas[i]._id%>">
     <img src="<%-casas[i].fotografia_da_localização%>" > 
     </a>
 
@@ -38,13 +38,20 @@
 
 <!--- Setting up the modal  --->
 
-<div id="modal-js-example" class="modal">
+<div id="<%= casas[i]._id%>" class="modal">
 <div class="modal-background"></div>
 <div class="modal-content">
-  <p class="image is-4by3">
-
-<img src="https://images.adsttc.com/media/images/5e87/a791/b357/6539/2100/0058/slideshow/shutterstock_1196071939.jpg?1585948522">  
-    </p>
+  
+<div class="w3-content w3-display-container">
+<img class="mySlides" src="<%-casas[i].foto_1%>" >
+<img class="mySlides"  src="<%-casas[i].foto_2%>" >
+<img class="mySlides"  src="<%-casas[i].foto_3%>">
+<img class="mySlides"  src="<%-casas[i].foto_4%>">
+<img class="mySlides"  src="<%-casas[i].foto_5%>">
+<div><%= casas[i]._id%></div>
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
 </div>
 <button class="modal-close is-large" aria-label="close"></button>
 </div>

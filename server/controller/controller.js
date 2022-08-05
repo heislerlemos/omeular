@@ -26,7 +26,14 @@ const casa = new Casadb ({
 	morada: req.body.morada ,
 	contacto: req.body.contacto,
 	estado_do_bairro: req.body.estado_do_bairro,
-	fotografia_da_localização: req.body.fotografia_da_localização
+	fotografia_da_localização: req.body.fotografia_da_localização,
+	foto_1: req.body.foto_1,
+	foto_2: req.body.foto_2,
+	foto_3: req.body.foto_3,
+	foto_4: req.body.foto_4,
+    foto_5: req.body.foto_5
+
+
 });
 
 
