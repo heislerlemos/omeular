@@ -6,6 +6,7 @@
 
 	<div class="card" style="width: 650px; " align="center">
 	<header class="card-header">
+    <!--
     <p class="card-header-title"> 
     	<a href="/update-casa?id=<%= casas[i]._id%>"><i class="fa-solid fa-pen-to-square" style="color: #008B8B;"></i>
       </a>
@@ -16,6 +17,7 @@
       </i>
      </a>    
     </button>
+    --->
   </header>
     <!-- Image to modal trigger--->
     <a class="js-modal-trigger" data-target="<%= casas[i]._id%>">
@@ -39,24 +41,35 @@
 <!--- Setting up the modal  --->
 
 <div id="<%= casas[i]._id%>" class="modal">
+
 <div class="modal-background"></div>
 <div class="modal-content">
-  
-<div class="w3-content w3-display-container">
-<img class="mySlides" src="<%-casas[i].foto_1%>" >
-<img class="mySlides"  src="<%-casas[i].foto_2%>" >
-<img class="mySlides"  src="<%-casas[i].foto_3%>">
-<img class="mySlides"  src="<%-casas[i].foto_4%>">
-<img class="mySlides"  src="<%-casas[i].foto_5%>">
-<div><%= casas[i]._id%></div>
-  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-</div>
+
+ <!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide"><img src="<%-casas[i].foto_1%>" ></div>
+    <div class="swiper-slide"><img src="<%-casas[i].foto_2%>"></div>
+      <div class="swiper-slide"><img src="<%-casas[i].foto_3%>"></div>
+    <div class="swiper-slide"><img src="<%-casas[i].foto_4%>" ></div>
+    <div class="swiper-slide"><img src="<%-casas[i].foto_5%>" ></div>
+
+
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
 </div>
 <button class="modal-close is-large" aria-label="close"></button>
 </div>
 
-					
+	</div>				
 
 <% } %>
 </div>	

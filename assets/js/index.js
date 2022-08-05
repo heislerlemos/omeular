@@ -23,7 +23,7 @@ $("#update_casa").submit(function(event){
 
     var request = {
     //    "url" : `https://omeular.herokuapp.com/api/casas/${data.id}`,
-    "url" : `http://localhost:3000/api/casas/${data.id}`,
+    "url" : `https://omeular.herokuapp.com/api/casas/${data.id}`,
         "method" : "PUT",
         "data" : data
     }
@@ -48,7 +48,7 @@ $("#update_casa").submit(function(event){
 
       var request = {
   //      "url" : `https://omeular.herokuapp.com/api/casas/${id}`,
-   "url" : `http://localhost:3000/api/casas/${id}`,
+   "url" : `https://omeular.herokuapp.com/api/casas/${id}`,
         "method" : "DELETE"
     }
 
@@ -116,21 +116,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// slide show
-var slideIndex = 1;
-showDivs(slideIndex);
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  loop: true,
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+
+});
