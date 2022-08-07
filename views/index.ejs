@@ -1,3 +1,5 @@
+
+
 <!--- Include header -->
 
 <%- include('include/_header') %>
@@ -17,10 +19,29 @@
     <p class="subtitle">
     	Adicione uma  casa que pretende vender ou arrenda ao 
     </p>
+<form action="/" method="GET">
+	<div class="field has-addons">
+		  <div class="control">
+		<input class="input" type="text" name="search" placeholder="procura a casa"> 
+	</div>
+		 	  <div class="control">
+		<input class="button is-warning" type="submit" value="Procurar">
+	</div>
+	</div>
+</form>
+
 
 </section>
+
+
 	<br>
 	<br>
+	<% if(noneMatch !== null){ %>
+
+	<h2><%= noneMatch %></h2>
+
+<% }%>
+
 	
 
 

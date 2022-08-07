@@ -1,16 +1,36 @@
 const axios = require('axios');
-
-
+var Casadb = require("../model/model");	
 
 
 exports.homeRoutes = (req, res) => {	
-	//Make a get request to the api users
 	
+	//Make a get request to the api users
+
+	if(req.query.search) {
+		var noneMatch = null;
+
+		const regex = new RegExp(escapeRegex(req.query.search), 'gi');
+
+		Casadb.find({morada: regex},function(err, allcasas){
+
+			if(err){
+				console.log(err);
+			} else {
+				if (allcasas.length < 1) {
+					var noneMatch = "Não foi encontrado nenhum valor por favor tente de novo"
+				}
+				res.render("index", {casas:allcasas, noneMatch: noneMatch});
+			}
+		})
+
+
+	} else {
+
 	axios.get('https://omeular.herokuapp.com/api/casas')
 
 		.then(function(response){
 			console.log(response.data)
-					res.render("index", {casas: response.data});
+					res.render("index", {casas: response.data , noneMatch: noneMatch});
 
 		})
 
@@ -18,7 +38,7 @@ exports.homeRoutes = (req, res) => {
 			res.send(err);
 		})
 
-
+	}
 }
 
 exports.add_casa = (req, res) => {
@@ -37,3 +57,7 @@ exports.add_casa = (req, res) => {
         })
 } 
 
+
+function escapeRegex(text) {
+    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+};
