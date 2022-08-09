@@ -51,17 +51,6 @@ var casas = [
       foto_4 : "https://cdn.angocasa.com/images/content/a/p/apartamento-t3-em-centralidade-do-kilamba-big-89640.jpg",
       foto_5 : "https://cdn.angocasa.com/images/content/a/p/apartamento-t3-em-centralidade-do-kilamba-big-73191.jpg"
 }),
- new Casadb ({
-  morada : "Vivenda V3 em Projecto Orlando Residencial (Kilamba)",
-  contacto : "923 283 828",
-    estado_do_bairro : "Bom",
-    fotografia_da_localização : "https://cdn.angocasa.com/images/content/v/i/vivenda-v3-em-projecto-orlando-residencial-via-expressa-big-45924.jpg",
-      foto_1 : "Vivenda V3 em Projecto Orlando Residencial (Kilamba)",
-      foto_2 : "https://cdn.angocasa.com/images/content/v/i/vivenda-v3-em-projecto-orlando-residencial-via-expressa-big-50242.jpg",
-      foto_3 : "https://cdn.angocasa.com/images/content/v/i/vivenda-v3-em-projecto-orlando-residencial-via-expressa-big-75804.jpg",
-      foto_4 : "https://cdn.angocasa.com/images/content/v/i/vivenda-v3-em-projecto-orlando-residencial-via-expressa-big-89123.jpg",
-      foto_5 : "https://cdn.angocasa.com/images/content/v/e/venda-vivenda-v3-projecto-orlando-residencial-via-expressa-big-32514.jpg"
-}),
 
  new Casadb ({
   morada : "Apartamento T2 em Viana",
