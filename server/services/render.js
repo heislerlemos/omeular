@@ -27,7 +27,7 @@ exports.homeRoutes = (req, res) => {
 	} else {
 	//axios.get('http://localhost:3000/api/casas')
 
-	axios.get('https://omeular.herokuapp.com/api/casas')
+	axios.get('https://omeular.herokuapp.com/api/casas/')
 
 		.then(function(response){
 			console.log(response.data)
