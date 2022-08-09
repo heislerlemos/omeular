@@ -5,23 +5,24 @@
 	<div class='column is-4'>		
 
 	<div class="card" style="width: 650px; " align="center">
-	<header class="card-header">
+	<!--
+  <header class="card-header">
    
     <p class="card-header-title"> 
-    	<a href="/update-casa?id=<%= casas[i]._id%>"><i class="fa-solid fa-pen-to-square" style="color: #008B8B;"></i>
+    	<a href="/update-casa?id=<%= casas[i]._id%>"><i class="fa-solid fa-pen-to-square" style="color: black;"></i>
       </a>
     </p>
     <button class="card-header-icon" aria-label="more options">
-    <a  data-id=<%=casas[i]._id%>>
-      <i class="fa-solid fa-delete-left" style="color: #8B0000;">          
+    <a  data-id="<%=casas[i]._id%>">
+      <i class="fa-solid fa-delete-left" style="color: black;">          
       </i>
      </a>    
     </button>
-   
   </header>
+  --->
     <!-- Image to modal trigger--->
     <a class="js-modal-trigger" data-target="<%= casas[i]._id%>">
-    <img src="<%-casas[i].fotografia_da_localização%>" > 
+    <img src="<%-casas[i].fotografia_da_localização%>"  >
     </a>
 
     <footer class="card-footer">

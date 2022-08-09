@@ -22,7 +22,6 @@ $("#update_casa").submit(function(event){
 
 
     var request = {
-    //    "url" : `https://omeular.herokuapp.com/api/casas/${data.id}`,
     "url" : `https://omeular.herokuapp.com/api/casas/${data.id}`,
         "method" : "PUT",
         "data" : data
@@ -40,14 +39,13 @@ $("#update_casa").submit(function(event){
 
 
   if(window.location.pathname == "/"){
-    $ondelete = $("div.column.is-6 div.card header.card-header button.card-header-icon  a");
+    $ondelete = $("div.column.is-4 div.card header.card-header button.card-header-icon  a");
    
     $ondelete.click(function(){
 
       var id = $(this).attr("data-id")
 
       var request = {
-  //      "url" : `https://omeular.herokuapp.com/api/casas/${id}`,
    "url" : `https://omeular.herokuapp.com/api/casas/${id}`,
         "method" : "DELETE"
     }

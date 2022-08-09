@@ -142,8 +142,9 @@ table {
 
 }
 
-.table tr:hover  {
-	background-color: #d6cbd3;	
+html body div.container div.columns.is-multiline div.column.is-4 div.card:hover {
+	  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
 }
 
 
@@ -308,6 +309,13 @@ border-color: #16db93;
 
 .swiper-slide img {
 	width:  100%;
+
 }
 
+a.js-modal-trigger img {
 
+width: 100%;
+    height: 17vw;
+    object-fit: cover;
+
+}
