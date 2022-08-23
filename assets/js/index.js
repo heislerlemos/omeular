@@ -133,3 +133,22 @@ const swiper = new Swiper('.swiper', {
   // And if we need scrollbar
 
 });
+
+
+$("#showdialog").click(function () {
+    $(".box").show();
+});
+$(".box .close").click(function () {
+    $(this).parent().hide(); //When the x button is clicked, the dialog is hidden
+})
+
+// alert
+document.addEventListener('DOMContentLoaded', () => {
+  (document.querySelectorAll('.card-footer-item .box .notification .delete') || []).forEach(($delete) => {
+    const $notification = $delete.parentNode;
+
+    $delete.addEventListener('click', () => {
+      $notification.parentNode.removeChild($notification);
+    });
+  });
+});

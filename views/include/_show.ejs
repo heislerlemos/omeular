@@ -26,16 +26,42 @@
     </a>
 
     <footer class="card-footer">
-    <b class="card-footer-item">Morada</b>
-    <b  class="card-footer-item">Contacto</b>
-    <b class="card-footer-item">Estado da localização </b>
+          <p class="card-footer-item">
+      <a class="js-modal-trigger" data-target="modal-js-example">
+        <button class="button is-rounded  is-light">
+          <i class="fa-regular fa-folder-open"></i>
+        </button>
+      </a>
+
+</p>
+      <div id="modal-js-example" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <div class="box">
+
+    <section class="hero is-dark">
+  <div class="hero-body">
+    <p class="title">
+      Informação
+    </p>
+    <br>
+    <p class="subtitle">
+       Morada : <%= casas[i].morada%><hr>
+       Contacto : <%= casas[i].contacto %><hr>
+        Estado do bairro :<%= casas[i].estado_do_bairro %><hr>
+
+    </p>
+  </div>
+</section>
+     </div>
+
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+ 
     </footer>
-    <footer class="card-footer">
-    <div class="card-footer-item" align="center" style="  border-bottom: 2px solid purple;">    	
-    <%= casas[i].morada %> </div>
-    <div class="card-footer-item" align="center" style="  border-bottom: 2px solid green; "> <%= casas[i].contacto %></div>
-    <div class="card-footer-item" align="center" style="  border-bottom: 2px solid pink; ">  <%= casas[i].estado_do_bairro %> </div>
-    </footer>
+
 		</div>
 		</div>
 

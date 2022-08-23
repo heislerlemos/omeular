@@ -319,3 +319,11 @@ width: 100%;
     object-fit: cover;
 
 }
+
+#dialog {
+
+    display:none;
+    position:fixed;
+    left:20%;
+    top:20%;
+}
