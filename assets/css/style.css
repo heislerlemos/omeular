@@ -327,3 +327,51 @@ width: 100%;
     left:20%;
     top:20%;
 }
+
+
+
+/*** Adding Media querys **/
+
+
+@media only screen and (max-width: 600px) {
+
+	.nav-brand {
+		font-size: 30px;
+	}
+
+	body {
+		line-height: 3.5px;
+		  margin: 0;
+  padding: 0;
+	}
+
+
+	button.is-large:nth-child(1) {
+		width: 44%;
+	}
+	
+	button.is-large:nth-child(1) > a:nth-child(1) {
+		font-size: 15px;
+		  text-align: center;
+	}
+
+	.is-danger > div:nth-child(1) {
+		background-color: var(--light);
+
+	}
+	
+	button.is-large:nth-child(1){
+	left:  25%;
+	margin-bottom: 2%;
+	
+	}
+	
+
+	div.column > div > a > img {
+	height: 300px;
+	}
+
+
+
+
+}
