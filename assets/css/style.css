@@ -10,8 +10,6 @@
 }
 
 
-
-
 * {
 
 	padding: 0;
@@ -351,7 +349,7 @@ width: 100%;
 	}
 	
 	button.is-large:nth-child(1) > a:nth-child(1) {
-		font-size: 15px;
+		font-size: 12px;
 		  text-align: center;
 	}
 
@@ -372,6 +370,21 @@ width: 100%;
 	}
 
 
+	#header > nav:nth-child(1) {
+	    position: fixed;
+	    z-index: 999;
+    
 
+	}
 
+	.is-danger > div:nth-child(1) {
+	    position: fixed;
+	    z-index: 998;
+		     
+	}
+	/*** To make the page not moving  **/
+	
+	body {
+	    overflow-x: hidden;
+	}
 }
