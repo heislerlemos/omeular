@@ -382,9 +382,19 @@ width: 100%;
 	    z-index: 998;
 		     
 	}
+	
 	/*** To make the page not moving  **/
 	
 	body {
 	    overflow-x: hidden;
+	    margin-botoom: 100px;
 	}
+
+	.space {
+
+	    margin-top: 320px;
+	  
+	}
+
+	
 }
