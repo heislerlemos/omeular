@@ -391,11 +391,23 @@ width: 100%;
 	}
 
 	.space {
-	    margin-top: 360px;	  
+	    margin-top: 320px;	  
 	}
 
 	
+	.modal-content {
+	    width: fit-content;
+	    height: 600px;
+		   
+	}
 
-
-
+ div#modal-js-example.modal.is-active div.modal-content div.box section.hero.is-dark div.hero-body {
+     font-size: 14px;
+     padding: 1px;
+    
+ }
+ div#modal-js-example.modal.is-active div.modal-content {
+       position: absolute;
+  top: 280px;
+ }
 }
