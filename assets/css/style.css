@@ -391,10 +391,14 @@ width: 100%;
 	}
 
 	.space {
-
-	    margin-top: 320px;
-	  
+	    margin-top: 320px;	  
 	}
 
-	
+
+	.is-active > div > div {
+	    padding: 3px;
+	    font-size: 18px;
+	    
+	}
+
 }
