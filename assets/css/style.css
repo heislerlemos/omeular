@@ -409,10 +409,10 @@ width: 100%;
 **/
 
 	.is-active > button {
-	    top: 50px;
+	    top: 70px;
 	}
 
 	.is-large.delete, .is-large.modal-close {
-	    top: 50px;
+	    top: 70px;
 	}
 }
