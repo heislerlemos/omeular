@@ -152,3 +152,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+
+
+function removeFunction()
+{
+      document.getElementById("removebanner").style.display = "none";
+
+}
+
+
+function showFunction()
+{
+      document.getElementById("removebanner").style.display = "block";
+
+}
+
+
+

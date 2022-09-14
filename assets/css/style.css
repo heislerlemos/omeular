@@ -406,9 +406,11 @@ width: 100%;
      padding: 1px;
     
  }
- div#modal-js-example.modal.is-active div.modal-content {
+/** div#modal-js-example.modal.is-active div.modal-content {
        position: absolute;
   bottom: -130px;
   left: 8.5%;
  }
+**/
+
 }
