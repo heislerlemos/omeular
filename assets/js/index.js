@@ -169,5 +169,15 @@ function showFunction()
 
 }
 
+// adding lock function
+
+document.onkeydown = function(evt) {
+evt = evt || window.event;
+if (evt.keyCode == 27) {
+    document.getElementById("removebanner").style.display = "block";
+
+}
+};
+
 
 
