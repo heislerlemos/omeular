@@ -45,7 +45,35 @@ exports.homeRoutes = (req, res) => {
 
 
 exports.add_casa = (req, res) => {
-	res.render("add_casa")
+
+
+
+      // -----------------------------------------------------------------------
+  // authentication middleware
+
+  const auth = {login: 'admin', password: 'dude007'} // change this
+
+  // parse login and password from headers
+  const b64auth = (req.headers.authorization || '').split(' ')[1] || ''
+  const [login, password] = Buffer.from(b64auth, 'base64').toString().split(':')
+
+  // Verify login and password are set and correct
+  if (login && password && login === auth.login && password === auth.password) {
+    // Access granted...
+    return   res.render("add_casa")
+  }
+
+  // Access denied...
+  res.set('WWW-Authenticate', 'Basic realm="401"') // change this
+  res.status(401).send('🔐 Será necessario authenticar primeiro para aceder a esta pagina .') // custom message
+
+  // -----------------------------------------------------------------------
+
+
+
+  
+
+    
 } 
 
 
