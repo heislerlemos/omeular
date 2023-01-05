@@ -59,20 +59,19 @@
   </div>
   <button class="modal-close is-large" aria-label="close"  onclick="showFunction()"></button>
 </div>
-
- 
     </footer>
-
 		</div>
 		</div>
 
 <!--- Setting up the modal  --->
 <div id="<%= casas[i]._id%>" class="modal">
-						  A<div class="modal-background"></div>
+<div class="modal-background"></div>
 <div class="modal-content">
 
- <!-- Slider main container -->
+
+<!-- Slider main container -->
 <div class="swiper">
+
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
@@ -84,14 +83,24 @@
 
 
   </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
 
+<!-- If we need pagination -->
+<div class="swiper-pagination"></div>
+<!---  the info will  go here-->
+<div class="information" >
+  Morada : <%= casas[i].morada%><hr>
+  Contacto : <%= casas[i].contacto %><hr>
+  Estado do bairro :<%= casas[i].estado_do_bairro %><hr>
+</div>
+<br>
   <!-- If we need navigation buttons -->
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 
+    
 </div>
+
+
 <button class="modal-close is-large" aria-label="close"  onclick="showFunction()"></button>
 </div>
 
