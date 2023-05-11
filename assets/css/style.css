@@ -124,10 +124,9 @@ hr {
 }
 
 #header nav {
-	background-color:    hsl(0, 0%, 21%) ;
+    background-color: hsl(0, 0%, 96%);
 	padding:  1em 0;
 	width:  100%;
-	  box-shadow: 5px 4px  grey;
 }
 
 #site-main {
