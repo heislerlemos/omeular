@@ -31,9 +31,7 @@ const casa = new Casadb ({
 	foto_2: req.body.foto_2,
 	foto_3: req.body.foto_3,
 	foto_4: req.body.foto_4,
-    foto_5: req.body.foto_5
-
-
+    	foto_5: req.body.foto_5
 });
 
 

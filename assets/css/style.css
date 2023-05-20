@@ -182,8 +182,20 @@ background-color: var(--dark);
 border-color: #32383e;
 }
 
+.hideburguer {
+ display: none;
+
+}
 
 @media only screen and (max-width: 1024px){
+	     .hide {
+	display: none;
+         }
+        .hideburguer {
+	display: block;
+	}
+
+
 	table, thead , tbody, th , td , tr {
 		display: block;
 	}
@@ -203,6 +215,10 @@ border-color: #32383e;
 	td {
 		border: none;
 		position: relative;
+	}
+
+	nav-brand  {
+	    font-size: 0.5px;
 	}
 }
 
@@ -356,6 +372,12 @@ width: 100%;
 
 
 @media only screen and (max-width: 600px) {
+        .hide {
+	display: none;
+         }
+        .hideburguer {
+	display: block;
+	}
 
 	.nav-brand {
 		font-size: 30px;
