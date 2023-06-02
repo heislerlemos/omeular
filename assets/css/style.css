@@ -1,27 +1,20 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 
-
-:root{
-
+:root {
 	--dark: hsl(0, 0%, 4%);
-	--light:  hsl(0, 0%, 29%) ;
-	--border:hsl(0, 0%, 100%);
+	--light: hsl(0, 0%, 29%);
+	--border: hsl(0, 0%, 100%);
 	--border-btn: hsl(0, 0%, 96%);
 }
 
-
 * {
-
 	padding: 0;
-	margin:  0;
+	margin: 0;
 	box-sizing: border-box;
-
 }
 
-
 body {
-		background-color: #FAF9F6;
-
+	background-color: #faf9f6;
 }
 
 a {
@@ -33,115 +26,92 @@ a {
 	margin: auto;
 }
 
-
 .nav-brand {
 	font-size: 3.5em;
 	font-weight: bold;
-
 }
-
-
 
 .d-flex {
-
-	display:  flex;
-	display:  wrap;
+	display: flex;
+	display: wrap;
 }
 
-
 .justify-beteween {
-
 	justify-content: space-between;
 }
 
-
 .text-center {
-
-text-align: center;
-
+	text-align: center;
 }
 
-
 .border-shadow {
+	border: 1px solid var(--border-btn);
+	box-shadow: 1px 3 px 10px;
+}
 
-	border:  1px solid var(--border-btn);
-		box-shadow:  1px 3 px 10px;
-	}
-
-.text-dark{
-	color:  #080808;
-	}
-
+.text-dark {
+	color: #080808;
+}
 
 .form-title h2 {
-	color:  black;
-  font-size: 40px;
-  font-weight: 20px;
+	color: black;
+	font-size: 40px;
+	font-weight: 20px;
 }
 
 .inline {
 	display: inline-block;
 }
 
-
-.text-light{
+.text-light {
 	color: var(--light);
 }
 
-
 .text-gradient {
-	background: linear-gradient(to right, #22c1c3 ,#5d6f15);
--webkit-background-clip: text;
-background-clip: text;
--webkit-text-fill-color: transparent;
-
+	background: linear-gradient(to right, #22c1c3, #5d6f15);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
-.information  {
-	  margin: auto;
-  width: 100%;
-  border: 3px solid black;
-  padding: 10px;
-  background-color: white;
-   box-shadow: 5px 10px ;
-
+.information {
+	margin: auto;
+	width: 100%;
+	border: 3px solid black;
+	padding: 10px;
+	background-color: white;
+	box-shadow: 5px 10px;
 }
-
 
 .information hr {
 	height: 0.5px;
 	background-color: black;
 }
 
-
-
 .card-footer-item {
 	display: none;
-
 }
 hr {
 	margin: 3px;
 }
 
 #header nav {
-    background-color: hsl(0, 0%, 96%);
-	padding:  1em 0;
-	width:  100%;
+	background-color: hsl(0, 0%, 96%);
+	padding: 1em 0;
+	width: 100%;
 }
 
 #site-main {
-	margin-top:  6em;
+	margin-top: 6em;
 }
 
-
 #site-main .container .box-nav > a {
-	font-size:  1em;
-	padding:  .5em 1em;
+	font-size: 1em;
+	padding: 0.5em 1em;
 }
 
 #site-main .container form {
-margin: 2em 0;
-
+	margin: 2em 0;
 }
 
 table {
@@ -149,67 +119,68 @@ table {
 	width: 100%;
 }
 
-.table td, .table th {
-	padding:  .75em;
+.table td,
+.table th {
+	padding: 0.75em;
 	vertical-align: top;
 	text-align: center;
 	border-top: 1px solid var(--border);
 }
 
-
 .table td > a.btn {
-	padding: .1em 1em;
+	padding: 0.1em 1em;
 	font-size: 1.1em;
 	margin: 0.2em;
-
 }
 
-html body div.container div.columns.is-multiline div.column.is-4 div.card:hover {
-	  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-
+html
+	body
+	div.container
+	div.columns.is-multiline
+	div.column.is-4
+	div.card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-
 
 .table tr:hover td > a {
-
 	box-shadow: none;
 }
 
-
-.table .thead-dark  th{
-color:  #fff;
-background-color: var(--dark);
-border-color: #32383e;
+.table .thead-dark th {
+	color: #fff;
+	background-color: var(--dark);
+	border-color: #32383e;
 }
 
 .hideburguer {
- display: none;
-
+	display: none;
 }
 
-@media only screen and (max-width: 1024px){
-	     .hide {
-	display: none;
-         }
-        .hideburguer {
-	display: block;
+@media only screen and (max-width: 1024px) {
+	.hide {
+		display: none;
+	}
+	.hideburguer {
+		display: block;
 	}
 
-
-	table, thead , tbody, th , td , tr {
+	table,
+	thead,
+	tbody,
+	th,
+	td,
+	tr {
 		display: block;
 	}
 
 	thead tr {
 		position: absolute;
 		top: -9999px;
-		left:  -9999px;
-
+		left: -9999px;
 	}
 
 	tr {
 		border: 1px solid var(--border);
-
 	}
 
 	td {
@@ -217,21 +188,19 @@ border-color: #32383e;
 		position: relative;
 	}
 
-	nav-brand  {
-	    font-size: 0.5px;
+	nav-brand {
+		font-size: 0.5px;
 	}
 }
-
 
 /** Add user and update user **/
 
 .form-title {
 	margin-top: 2em;
-	
 }
 
 .form-title > h2 {
-	padding: .5em 0;
+	padding: 0.5em 0;
 }
 
 .new_user {
@@ -239,59 +208,50 @@ border-color: #32383e;
 	margin: auto;
 }
 
-#update_casa .form-group, 
-#add_user .form-group  {
-	margin: .4em 0;
+#update_casa .form-group,
+#add_user .form-group {
+	margin: 0.4em 0;
 }
 
-
-#update_casa .form-group  input[type="text"],
-#add_user .form-group  input[type="text"]{
+#update_casa .form-group input[type="text"],
+#add_user .form-group input[type="text"] {
 	width: 100%;
-	padding: .6em 1em;
-	margin: .5em 0;
-	border:  1px solid var(--border);
+	padding: 0.6em 1em;
+	margin: 0.5em 0;
+	border: 1px solid var(--border);
 	font-size: 1em;
-	border-radius: .2em;
-
+	border-radius: 0.2em;
 }
 
-
-
-#update_casa .form-group  .radio,
-
-#add_user .form-group  .radio
-{
+#update_casa .form-group .radio,
+#add_user .form-group .radio {
 	margin: 1em 2em;
 }
 
-
 /* adding style to radio buttons */
 
-
-.radio input[type="radio"]{
+.radio input[type="radio"] {
 	position: absolute;
 	opacity: 0;
 }
 
 .radio input[type="radio"] + .radio-label:before {
-	content:  "";
-	background: var(--border-btn) ;
+	content: "";
+	background: var(--border-btn);
 	border-radius: 100%;
-	border:  1px solid var(--border);
+	border: 1px solid var(--border);
 	display: inline-block;
-	width:  1em;
+	width: 1em;
 	height: 1em;
 	position: relative;
 	top: -0em;
-	margin-right: .5em;
+	margin-right: 0.5em;
 	vertical-align: top;
-	cursor:  pointer;
+	cursor: pointer;
 	text-align: center;
 	-webkit-transition: all 250ms ease;
 	transition: all 250ms ease;
 }
-
 
 .radio input[type="radio"]:checked + .radio-label:before {
 	background-color: #16db93;
@@ -299,12 +259,9 @@ border-color: #32383e;
 }
 
 .radio input[type="radio"]:focus + .radio-label:before {
-outline: none;
-border-color: #16db93;
+	outline: none;
+	border-color: #16db93;
 }
-
-
-
 
 .radio input[type="radio"]:disabled + .radio-label:before {
 	box-shadow: inset 0 0 0 4px #e9ecef;
@@ -315,68 +272,60 @@ border-color: #16db93;
 #update_casa .form-group .btn,
 #add_user .form-group .btn {
 	width: 100%;
-	padding: .9em 1em;
+	padding: 0.9em 1em;
 	background-color: var(--dark);
 	border: none;
 	font-size: 1em;
 	cursor: pointer;
 	color: white;
-	border-radius: .2em;
-	margin: .5em 0;
+	border-radius: 0.2em;
+	margin: 0.5em 0;
 }
 
-#update_casa .form-group .btn:hover ,
+#update_casa .form-group .btn:hover,
 #add_user .form-group .btn:hover {
 	background-color: var(--dark);
-	color:  var(--border);
+	color: var(--border);
 }
-
 
 .modal-content {
 	width: 100%;
-	height:  100vh;
+	height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
 .swiper {
-	width:  80%;
-	height:  fit-content;
+	width: 80%;
+	height: fit-content;
 }
 
 .swiper-slide img {
-	width:  100%;
-
+	width: 100%;
 }
 
 a.js-modal-trigger img {
-
-width: 100%;
-    height: 17vw;
-    object-fit: cover;
-
+	width: 100%;
+	height: 17vw;
+	object-fit: cover;
 }
 
 #dialog {
-
-    display:none;
-    position:fixed;
-    left:20%;
-    top:20%;
+	display: none;
+	position: fixed;
+	left: 20%;
+	top: 20%;
 }
-
-
 
 /*** Adding Media querys **/
 
-
 @media only screen and (max-width: 600px) {
-        .hide {
-	display: none;
-         }
-        .hideburguer {
-	display: block;
+	.hide {
+		display: none;
+	}
+	.hideburguer {
+		display: block;
 	}
 
 	.nav-brand {
@@ -385,69 +334,60 @@ width: 100%;
 
 	body {
 		line-height: 3.5px;
-		  margin: 0;
-  padding: 0;
+		margin: 0;
+		padding: 0;
 	}
-
 
 	button.is-large:nth-child(1) {
 		width: 44%;
 	}
-	
+
 	button.is-large:nth-child(1) > a:nth-child(1) {
 		font-size: 12px;
-		  text-align: center;
+		text-align: center;
 	}
 
 	.is-danger > div:nth-child(1) {
 		background-color: var(--light);
+	}
 
+	button.is-large:nth-child(1) {
+		left: 25%;
+		margin-bottom: 2%;
 	}
-	
-	button.is-large:nth-child(1){
-	left:  25%;
-	margin-bottom: 2%;
-	
-	}
-	
 
 	div.column > div > a > img {
-	height: 300px;
+		height: 300px;
 	}
 
-
 	#header > nav:nth-child(1) {
-	    position: fixed;
-	    z-index: 999;
-    
-
+		position: fixed;
+		z-index: 999;
 	}
 
 	.is-danger > div:nth-child(1) {
-	    position: fixed;
-	    z-index: 998;
-		     
+		position: fixed;
+		z-index: 998;
 	}
-	
+
 	/*** To make the page not moving  **/
-	
+
 	body {
-	    overflow-x: hidden;
-	    margin-botoom: 100px;
+		overflow-x: hidden;
+		margin-botoom: 100px;
 	}
 
 	.space {
-	    margin-top: 320px;	  
+		margin-top: 320px;
 	}
 
-	
-/**	
+	/**	
  div#modal-js-example.modal.is-active div.modal-content div.box section.hero.is-dark div.hero-body {
      font-size: 14px;
      padding: 1px;
     
  }**/
-/** div#modal-js-example.modal.is-active div.modal-content {
+	/** div#modal-js-example.modal.is-active div.modal-content {
        position: absolute;
   bottom: -130px;
   left: 8.5%;
@@ -455,10 +395,11 @@ width: 100%;
 **/
 
 	.is-active > button {
-	    top: 70px;
+		top: 70px;
 	}
 
-	.is-large.delete, .is-large.modal-close {
-	    top: 70px;
+	.is-large.delete,
+	.is-large.modal-close {
+		top: 70px;
 	}
 }

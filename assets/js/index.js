@@ -1,183 +1,166 @@
-// adding the 
+// adding the
 
 $("#add_user").submit(function (event) {
 	// body...
-	alert("Os dados foram inseridos com sucessos")
-})
+	alert("Os dados foram inseridos com sucessos");
+});
 
+// Updating the users
 
+$("#update_casa").submit(function (event) {
+	event.preventDefault();
 
-// Updating the users 
+	var unindexed_array = $(this).serializeArray();
+	var data = {};
 
-$("#update_casa").submit(function(event){
-    event.preventDefault();
+	$.map(unindexed_array, function (n, i) {
+		data[n["name"]] = n["value"];
+	});
 
-    var unindexed_array = $(this).serializeArray();
-    var data = {}
+	var request = {
+		url: `https://omeular.herokuapp.com/api/casas/${data.id}`,
+		method: "PUT",
+		data: data,
+	};
 
+	$.ajax(request).done(function (response) {
+		alert("A casa foi atualizada com sucesso .");
+	});
 
-    $.map(unindexed_array, function(n, i){
-        data[n['name']] = n['value']
-    })
+	console.log(data.morada);
+});
 
+if (window.location.pathname == "/") {
+	$ondelete = $(
+		"div.column.is-4 div.card header.card-header button.card-header-icon  a"
+	);
 
-    var request = {
-    "url" : `https://omeular.herokuapp.com/api/casas/${data.id}`,
-        "method" : "PUT",
-        "data" : data
-    }
+	$ondelete.click(function () {
+		var id = $(this).attr("data-id");
 
-    $.ajax(request).done(function(response){
-        alert("A casa foi atualizada com sucesso .");
-    })
+		var request = {
+			url: `https://omeular.herokuapp.com/api/casas/${id}`,
+			method: "DELETE",
+		};
 
-        console.log(data.morada);
-
-})
-
-
-
-
-  if(window.location.pathname == "/"){
-    $ondelete = $("div.column.is-4 div.card header.card-header button.card-header-icon  a");
-   
-    $ondelete.click(function(){
-
-      var id = $(this).attr("data-id")
-
-      var request = {
-   "url" : `https://omeular.herokuapp.com/api/casas/${id}`,
-        "method" : "DELETE"
-    }
-
-    if(confirm (" Tens a certeza que queres apagar ?")){
-        
-     $.ajax(request).done(function(response){
-        alert("A casa foi apagada com sucesso .");
-        location.reload();
-    })
-
-    }
-
-  })
-
+		if (confirm(" Tens a certeza que queres apagar ?")) {
+			$.ajax(request).done(function (response) {
+				alert("A casa foi apagada com sucesso .");
+				location.reload();
+			});
+		}
+	});
 }
 
+//Modal function
 
-//Modal function 
+document.addEventListener("DOMContentLoaded", () => {
+	// Functions to open and close a modal
+	function openModal($el) {
+		$el.classList.add("is-active");
+	}
 
+	function closeModal($el) {
+		$el.classList.remove("is-active");
+	}
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Functions to open and close a modal
-  function openModal($el) {
-    $el.classList.add('is-active');
-  }
+	function closeAllModals() {
+		(document.querySelectorAll(".modal") || []).forEach(
+			($modal) => {
+				closeModal($modal);
+			}
+		);
+	}
 
-  function closeModal($el) {
-    $el.classList.remove('is-active');
-  }
+	// Add a click event on buttons to open a specific modal
+	(document.querySelectorAll(".js-modal-trigger") || []).forEach(
+		($trigger) => {
+			const modal = $trigger.dataset.target;
+			const $target = document.getElementById(modal);
 
-  function closeAllModals() {
-    (document.querySelectorAll('.modal') || []).forEach(($modal) => {
-      closeModal($modal);
-    });
-  }
+			$trigger.addEventListener("click", () => {
+				openModal($target);
+			});
+		}
+	);
 
-  // Add a click event on buttons to open a specific modal
-  (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
-    const modal = $trigger.dataset.target;
-    const $target = document.getElementById(modal);
+	// Add a click event on various child elements to close the parent modal
+	(
+		document.querySelectorAll(
+			".modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button"
+		) || []
+	).forEach(($close) => {
+		const $target = $close.closest(".modal");
 
-    $trigger.addEventListener('click', () => {
-      openModal($target);
-    });
-  });
+		$close.addEventListener("click", () => {
+			closeModal($target);
+		});
+	});
 
-  // Add a click event on various child elements to close the parent modal
-  (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
-    const $target = $close.closest('.modal');
+	// Add a keyboard event to close all modals
+	document.addEventListener("keydown", (event) => {
+		const e = event || window.event;
 
-    $close.addEventListener('click', () => {
-      closeModal($target);
-    });
-  });
-
-  // Add a keyboard event to close all modals
-  document.addEventListener('keydown', (event) => {
-    const e = event || window.event;
-
-    if (e.keyCode === 27) { // Escape key
-      closeAllModals();
-    }
-  });
+		if (e.keyCode === 27) {
+			// Escape key
+			closeAllModals();
+		}
+	});
 });
 
+const swiper = new Swiper(".swiper", {
+	// Optional parameters
+	loop: true,
 
+	// If we need pagination
+	pagination: {
+		el: ".swiper-pagination",
+	},
 
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  loop: true,
+	// Navigation arrows
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-
+	// And if we need scrollbar
 });
-
 
 $("#showdialog").click(function () {
-    $(".box").show();
+	$(".box").show();
 });
 $(".box .close").click(function () {
-    $(this).parent().hide(); //When the x button is clicked, the dialog is hidden
-})
-
-// alert
-document.addEventListener('DOMContentLoaded', () => {
-  (document.querySelectorAll('.card-footer-item .box .notification .delete') || []).forEach(($delete) => {
-    const $notification = $delete.parentNode;
-
-    $delete.addEventListener('click', () => {
-      $notification.parentNode.removeChild($notification);
-    });
-  });
+	$(this).parent().hide(); //When the x button is clicked, the dialog is hidden
 });
 
+// alert
+document.addEventListener("DOMContentLoaded", () => {
+	(
+		document.querySelectorAll(
+			".card-footer-item .box .notification .delete"
+		) || []
+	).forEach(($delete) => {
+		const $notification = $delete.parentNode;
 
+		$delete.addEventListener("click", () => {
+			$notification.parentNode.removeChild($notification);
+		});
+	});
+});
 
-
-function removeFunction()
-{
-      document.getElementById("removebanner").style.display = "none";
-
+function removeFunction() {
+	document.getElementById("removebanner").style.display = "none";
 }
 
-
-function showFunction()
-{
-      document.getElementById("removebanner").style.display = "block";
-
+function showFunction() {
+	document.getElementById("removebanner").style.display = "block";
 }
 
 // adding lock function
 
-document.onkeydown = function(evt) {
-evt = evt || window.event;
-if (evt.keyCode == 27) {
-    document.getElementById("removebanner").style.display = "block";
-
-}
+document.onkeydown = function (evt) {
+	evt = evt || window.event;
+	if (evt.keyCode == 27) {
+		document.getElementById("removebanner").style.display = "block";
+	}
 };
-
-
-
