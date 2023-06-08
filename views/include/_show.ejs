@@ -4,107 +4,107 @@
 
 	<div class='column is-4'>		
 
-	<div class="card" style="width: 650px; " align="center">
-<!---
-  <header class="card-header">
-   
-    <p class="card-header-title"> 
-    	<a href="/update-casa?id=<%= casas[i]._id%>"><i class="fa-solid fa-pen-to-square" style="color: black;"></i>
-      </a>
-    </p>
-    <button class="card-header-icon" aria-label="more options">
-    <a  data-id="<%=casas[i]._id%>">
-      <i class="fa-solid fa-delete-left" style="color: black;">          
-      </i>
-     </a>    
-    </button>
-  </header>
--->
-    <!-- Image to modal trigger--->
-    <a class="js-modal-trigger" data-target="<%= casas[i]._id%>" onclick="removeFunction()">
-    <img src="<%-casas[i].fotografia_da_localização%>"  >
-    </a>
+		<div class="card" style="width: 650px; " align="center">
+			<!---
+				<header class="card-header">
 
-    <footer class="card-footer">
-          <p class="card-footer-item">
-      <a class="js-modal-trigger" data-target="modal-js-example">
-        <button class="button is-rounded  is-light"  onclick="removeFunction()">
-          <i class="fa-regular fa-folder-open"></i>
-        </button>
-      </a>
+				<p class="card-header-title"> 
+				<a href="/update-casa?id=<%= casas[i]._id%>"><i class="fa-solid fa-pen-to-square" style="color: black;"></i>
+				</a>
+				</p>
+				<button class="card-header-icon" aria-label="more options">
+				<a  data-id="<%=casas[i]._id%>">
+				<i class="fa-solid fa-delete-left" style="color: black;">          
+				</i>
+				</a>    
+				</button>
+				</header>
+			-->
+			<!-- Image to modal trigger--->
+			<a class="js-modal-trigger" data-target="<%= casas[i]._id%>" onclick="removeFunction()">
+				<img src="<%-casas[i].fotografia_da_localização%>"  >
+			</a>
 
-  </p>
-					
-<div id="modal-js-example" class="modal">
-  <div class="modal-background"></div>
-  <div class="modal-content">
-    <div class="box">
+			<footer class="card-footer">
+				<p class="card-footer-item">
+				<a class="js-modal-trigger" data-target="modal-js-example">
+					<button class="button is-rounded  is-light"  onclick="removeFunction()">
+						<i class="fa-regular fa-folder-open"></i>
+					</button>
+				</a>
 
-    <section class="hero is-dark">
-  <div class="hero-body" >
-    <p class="title">
-      Informação
-    </p>
-    <br>
+				</p>
 
-       Morada : <%= casas[i].morada%><hr>
-       Contacto : <%= casas[i].contacto %><hr>
-        Estado do bairro :<%= casas[i].estado_do_bairro %><hr>
+				<div id="modal-js-example" class="modal">
+					<div class="modal-background"></div>
+					<div class="modal-content">
+						<div class="box">
 
-    
-  </div>
-</section>
-     </div>
+							<section class="hero is-dark">
+								<div class="hero-body" >
+									<p class="title">
+									Informação
+									</p>
+									<br>
 
-  </div>
-  <button class="modal-close is-large" aria-label="close"  onclick="showFunction()"></button>
-</div>
-    </footer>
+									Morada : <%= casas[i].morada%><hr>
+									Contacto : <%= casas[i].contacto %><hr>
+									Estado do bairro :<%= casas[i].estado_do_bairro %><hr>
+
+
+								</div>
+							</section>
+						</div>
+
+					</div>
+					<button class="modal-close is-large" aria-label="close"  onclick="showFunction()"></button>
+				</div>
+			</footer>
 		</div>
+	</div>
+
+	<!--- Setting up the modal  --->
+	<div id="<%= casas[i]._id%>" class="modal">
+		<div class="modal-background"></div>
+		<div class="modal-content">
+
+
+			<!-- Slider main container -->
+			<div class="swiper">
+
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper">
+					<!-- Slides -->
+					<div class="swiper-slide"><img src="<%-casas[i].foto_1%>" ></div>
+					<div class="swiper-slide"><img src="<%-casas[i].foto_2%>"></div>
+					<div class="swiper-slide"><img src="<%-casas[i].foto_3%>"></div>
+					<div class="swiper-slide"><img src="<%-casas[i].foto_4%>" ></div>
+					<div class="swiper-slide"><img src="<%-casas[i].foto_5%>" ></div>
+
+
+				</div>
+
+				<!-- If we need pagination -->
+				<div class="swiper-pagination"></div>
+				<!---  the info will  go here-->
+				<div class="information" >
+					Morada : <%= casas[i].morada%><hr>
+					Contacto : <%= casas[i].contacto %><hr>
+					Estado do bairro :<%= casas[i].estado_do_bairro %><hr>
+				</div>
+				<br>
+				<!-- If we need navigation buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+
+
+			</div>
+
+
+			<button class="modal-close is-large" aria-label="close"  onclick="showFunction()"></button>
 		</div>
-
-<!--- Setting up the modal  --->
-<div id="<%= casas[i]._id%>" class="modal">
-<div class="modal-background"></div>
-<div class="modal-content">
-
-
-<!-- Slider main container -->
-<div class="swiper">
-
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide"><img src="<%-casas[i].foto_1%>" ></div>
-    <div class="swiper-slide"><img src="<%-casas[i].foto_2%>"></div>
-      <div class="swiper-slide"><img src="<%-casas[i].foto_3%>"></div>
-    <div class="swiper-slide"><img src="<%-casas[i].foto_4%>" ></div>
-    <div class="swiper-slide"><img src="<%-casas[i].foto_5%>" ></div>
-
-
-  </div>
-
-<!-- If we need pagination -->
-<div class="swiper-pagination"></div>
-<!---  the info will  go here-->
-<div class="information" >
-  Morada : <%= casas[i].morada%><hr>
-  Contacto : <%= casas[i].contacto %><hr>
-  Estado do bairro :<%= casas[i].estado_do_bairro %><hr>
-</div>
-<br>
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
-    
-</div>
-
-
-<button class="modal-close is-large" aria-label="close"  onclick="showFunction()"></button>
-</div>
 
 	</div>				
 
-<% } %>
+	<% } %>
 </div>	

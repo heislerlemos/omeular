@@ -4,52 +4,52 @@
 
 <%- include('include/_header') %>
 <!---- /include header -->
-    <!--- Main site--->
+<!--- Main site--->
 
 
-    <div class="container">
-    <div id="removebanner">
-<!---
- <section class="hero">
-  <div class="hero-body">
-    <p class="title">
-	
+<div class="container">
+	<div id="removebanner">
+		<!---
+			<section class="hero">
+			<div class="hero-body">
+			<p class="title">
 
-    </p>
-    <p class="subtitle">
-    	Adicione uma  casa que pretende vender ou arrenda ao 
-    </p>
-<form action="/" method="GET">
-	<div class="field has-addons">
-		  <div class="control">
-		<input class="input" type="text" name="search" placeholder="procura a casa"> 
+
+			</p>
+			<p class="subtitle">
+			Adicione uma  casa que pretende vender ou arrenda ao 
+			</p>
+			<form action="/" method="GET">
+			<div class="field has-addons">
+			<div class="control">
+			<input class="input" type="text" name="search" placeholder="procura a casa"> 
+			</div>
+			<div class="control">
+			<input class="button is-warning" type="submit" value="Procurar">
+			</div>
+			</div>
+			</form>
+			</section>
+			--->
+			</div>
+			<br>
+			<br>
+			<% if(noneMatch !== null){ %>
+
+			<h2><%= noneMatch %></h2>
+
+			<% }%>
+
+
+
+
+			<%- include('include/_show') %>
+
 	</div>
-		 	  <div class="control">
-		<input class="button is-warning" type="submit" value="Procurar">
-	</div>
-	</div>
-</form>
-    </section>
-    --->
-    </div>
-	<br>
-	<br>
-<% if(noneMatch !== null){ %>
 
-	<h2><%= noneMatch %></h2>
+	<!--- /main site -->
 
-<% }%>
+	<!--- Include footer -->
 
-
-
-   
-<%- include('include/_show') %>
-
-	</div>
-
-<!--- /main site -->
-
-<!--- Include footer -->
-
-<%- include('include/_footer') %>
-<!---- /include footer 	
+	<%- include('include/_footer') %>
+	<!---- /include footer 	
