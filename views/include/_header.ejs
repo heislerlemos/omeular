@@ -23,8 +23,8 @@
 <body>
 
 <!--- header -->
-<header id="header">
-	<nav class="navbar is-trans">
+
+	<nav class="navbar" role="navigation" aria-label="main navigation" >
 
 
 <!---  Adding navburguer to responsive --->
@@ -34,15 +34,16 @@
   <span aria-hidden="true"></span>
   <span aria-hidden="true"></span>
     </a>
+    <!-- it needs to to the navigation menus hrefs - -->
 
-     <div class="navbar-menu" id="navMenu">
+    <div class="navbar-menu">
   <!-- navbar-start, navbar-end... -->
       <div class="navbar-start">
       
     <div class="navbar-item">
 	<a href="/" class="nav-brand " style="color: hsl(0, 0%, 96%); text-shadow: 1px 1px 3px hsl(0, 0%, 21%);">O meu lar </a>
     </div>
-	      <div class="navbar-item">
+    <div class="navbar-item">
       <a href="add-casa" >Adicionar Nova Casas</a>
       </div >
 	<div class="navbar-item">
@@ -63,38 +64,52 @@
 
      </div>
    </div>
-     <div class="hide">
-      <div class="navbar-end">  
-     
-    <div class="navbar-item">
-	<a href="/" class="nav-brand " style="color: hsl(0, 0%, 96%); text-shadow: 1px 1px 3px hsl(0, 0%, 21%);">O meu lar </a>
-    </div>
+   <!--End of responsive nav -->
+   <!-- this will hide on responsive -->
 
-      <div class="navbar-item">
+	 <div class="navbar-menu">
+	<!-- start of navabar start -->
+	<div class="navbar-start"> 
+	<div class="navbar-brand">
+  		<div class="navbar-item is-expanded">
+		<a href="/" class="nav-brand " style="color: hsl(0, 0%, 96%); text-shadow: 1px 1px 3px hsl(0, 0%, 21%);">o meu lar </a>
+    		</div>
+		  </div>	
+	</div>
+
+ 	<!-- end of navabar start -->
+	<div class="navbar-end">
+  	<!-- first navbar of the end -->
+	<div class="navbar-item">
       <button class="button is-danger" >
          <a href="add-casa" style="color:white;">Adicionar Nova Casas</a> 
       </button> 
-
-
-        </div>      
-
+        </div>  
+	<!-- end of first navabar -->
+	<!-- second navbar -->
 	<div class="navbar-item">	
         <form action="/" method="GET">
 	<div class="field has-addons">
-        <div class="control">
+        
+	<div class="control">
         <input class="input" type="text" name="search" placeholder="procura a casa"> 
 	</div>
 	<div class="control">
         <input class="button is-info" type="submit" value="Procurar">
-	</div>
+	</div>	
+	
 	</div>
          </form>
         </div>
-        
-	 </div>
+	<!-- end of second -->
+   	</div>
+	<!-- end of navabar end-->
+
+		<!-- end of the navbar item --->
      </div>
+     <!-- end of the hide -->
   </nav>
-</header>
+
 
 <!-- /header --->
 

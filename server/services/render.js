@@ -24,7 +24,7 @@ exports.homeRoutes = (req, res) => {
 			}
 		});
 	} else {
-		axios.get("https://omeular.herokuapp.com/api/casas/")
+		axios.get("http://0.0.0.0:3000/api/casas/")
 
 			//axios.get('https://omeular.herokuapp.com/api/casas/')
 
@@ -75,7 +75,7 @@ exports.add_casa = (req, res) => {
 };
 
 exports.update_casa = (req, res) => {
-	axios.get("https://omeular.herokuapp.com/api/casas/", {
+	axios.get("http://0.0.0.0:3000/api/casas/", {
 		params: { id: req.query.id },
 	})
 		.then(function (casadata) {

@@ -156,6 +156,10 @@ html
 	display: none;
 }
 
+
+
+
+
 @media only screen and (max-width: 1024px) {
 	.hide {
 		display: none;
@@ -203,7 +207,7 @@ html
 	padding: 0.5em 0;
 }
 
-.new_user {
+.new{
 	max-width: 786px;
 	margin: auto;
 }
@@ -321,7 +325,7 @@ a.js-modal-trigger img {
 /*** Adding Media querys **/
 
 @media only screen and (max-width: 600px) {
-	.hide {
+	#hide {
 		display: none;
 	}
 	.hideburguer {
