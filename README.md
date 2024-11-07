@@ -30,5 +30,9 @@ Install dependency
 npm install
 npm install -g nodemon
 ```
+Then run  with nodemon
 
+```
+nodemon server.js
+```
 
