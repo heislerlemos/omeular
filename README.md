@@ -1,4 +1,7 @@
-omeular.herokuapp.com
+O meu lar
+
+![lar](/assets/img/2024-11-07_15-57.png)
+
 
 O meu lar is  app that allows people at Africa/Angola to rent/buy houses in a more affordable areas .
 
